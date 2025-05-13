@@ -20,7 +20,10 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 model = tf.keras.models.load_model('../test.h5')
 actions = []
-with open("D:/TTNM/Sign-language-translator/server/data/words.txt", "r") as file:
+current_dir = os.path.dirname(__file__)
+file_path = os.path.join(current_dir, "data", "words.txt")
+
+with open(file_path, "r", encoding="utf-8") as file:
     actions = [line.strip() for line in file if line.strip()]
 
 @app.route('/predict', methods=['POST'])
