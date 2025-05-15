@@ -1,0 +1,11 @@
+tensorflow
+tensorflowjs
+opencv-contrib-python
+mediapipe
+scikit-learn
+matplotlib
+pandas
+flask
+flask_cors
+pose_format
+googletrans
